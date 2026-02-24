@@ -1,0 +1,14 @@
+.botaoo {
+    border: 10px solid #1A4052;
+    background-color:#19b5ff;;
+    color: white;
+    border-radius: 50px;
+    padding: 18px 60px;
+    font-size: 22px;
+}
+
+.destaque {
+    background-color: bisque;
+    font-size: larger;
+    color: blue
+}
