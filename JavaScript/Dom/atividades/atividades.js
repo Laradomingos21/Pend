@@ -62,11 +62,16 @@ botao2.addEventListener("click", function () {
 });
 
 //Hard
-let nome = document.getElementById("nome");
-let enviar = document.getElementById("enviar");
-let mensagem = document.getElementById("mensagem");
+let texto4 = document.getElementById("texto4");
+let botao3 = document.getElementById("botao3");
+let mensagem = document.getElementById("alerta");
 
-enviar.addEventListener("click", function (){
-    
-
-});
+botao3.addEventListener("click", function () {
+    if (texto4.value === "") {
+        mensagem.innerText = "o campo nome é obrigatório";
+        mensagem.classList.add("vazio");
+    } else {
+        alerta.classList.toggle("preenchido");
+        mensagem.innerText = "nome enviado com sucesso";
+    }
+})
