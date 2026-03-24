@@ -75,3 +75,43 @@ botao3.addEventListener("click", function () {
         mensagem.innerText = "nome enviado com sucesso";
     }
 })
+
+//Atividade 7 e 8
+let email = document.getElementById("email");
+let senha = document.getElementById("senha");
+let email2 = document.getElementById("email2");
+let senha2 = document.getElementById("senha2");
+let BotaoMandar = document.getElementById ("BotaoMandar");
+let mandar = document.getElementById("mandar");
+
+    mandar.addEventListener("click", function() {
+    if (!email.value.includes("@") && !email.value.includes('.')) {
+        email2.innerText = "é obrigátorio ter o @ e o .";
+        email2.style.color = "red";
+        email2.classList.add("erro");
+    } else {
+        email2.innerText = "e-mail válido";
+        email2.style.color = "green";
+        email2.classList.add("sucesso");
+    }
+})
+
+        senha.addEventListener("keyup", function() { //verifica em tempo real dentro de uma variável que voce esta solicitando 
+    if (senha.value.length < 6) { //length tamanho da senha
+        senha2.innerText = "senha fraca";
+        senha2.style.color = "red";
+        senha2.classList.add("erro");
+
+    } else if (senha.value.length >= 6 && senha.value.length < 10){
+        senha2.innerText = "senha aceitável";
+        senha2.style.color = "orange";
+        senha2.classList.add("aceitavel");
+
+    } else if (senha.value.length >= 10){
+        senha2.innerText = "senha forte";
+        senha2.classList.add("ok");
+         senha2.style.color = "green";
+    }
+}) 
+
+    
