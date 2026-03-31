@@ -110,7 +110,7 @@ let mandar = document.getElementById("mandar");
     } else if (senha.value.length >= 10){
         senha2.innerText = "senha forte";
         senha2.classList.add("ok");
-         senha2.style.color = "green";
+        senha2.style.color = "green";
     }
 }) 
 
