@@ -1,0 +1,105 @@
+body {
+    background-color: rgb(223, 214, 187) ;
+}
+.topo {
+    background-color: gray;
+    padding: 10px;
+}
+
+.menu a {
+    margin-right: 20px;
+    color: blue;
+}
+
+.conteudo {
+    width: 1200px;
+    margin: auto;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    margin: 0 auto;
+    
+}
+
+
+#golfinho {
+    display: flex;
+   
+    flex-wrap: wrap;
+    /* quebra linha se precisar */
+    gap: 20px;
+    margin: 30px auto;
+}
+
+.sorriso-container{
+    text-align: center;
+    background-color: rgb(235, 230, 227);
+    padding: 15px;
+    border-radius: 40px;
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.2);
+    width: 420px; /* um pouco maior que a imagem */
+    max-width: 500px;
+}
+
+.sorriso-container img{
+
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    margin-bottom: 15px;
+}
+
+.sorriso-container ul{
+    display: grid;
+    grid-template-columns: 188px 188px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.respiracao-container{
+    text-align: center;
+    background-color: rgb(235, 230, 227);
+    padding: 15px;
+    border-radius: 40px;
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.2);
+
+    width: 420px; /* um pouco maior que a imagem */
+}
+
+.respiracao-container ul{
+    display: grid;
+    grid-template-columns: 188px 188px;
+    gap: 20px
+}
+
+.suicida-container {
+    text-align: center;
+    background-color: rgb(235, 230, 227);
+    padding: 15px;
+    border-radius: 40px;
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.2);
+    width: 420px; /* um pouco maior que a imagem */
+    max-width: 500px;
+
+}
+
+.containers {
+    display: flex;
+    gap: 20px; /* espaço entre os containers */
+    flex-wrap: wrap; /* quebra linha se não couber */
+}
+div{
+    flex-wrap: wrap;
+}
+.noticia img {
+    width: 800px;
+}
+
+.rodape {
+    margin-top: 30px;
+    background-color: gray;
+    padding: 20px;
+}
