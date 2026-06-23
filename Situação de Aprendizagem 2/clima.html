@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima - NewsToday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topo">
+        <h1>NewsToday</h1>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="golfinho.html">Natureza</a>
+            <a href="clima.html">Clima</a>
+            <a href="brasil.html">Brasil</a>
+            <a href="saude.html">Saúde</a>
+            <a href="tecnologia.html">Tecnologia</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 20px; margin-top: 20px; font-size: 1.8rem;">Clima em Mococa ⛅</h2>
+       
+        <div id="clima">
+            <div class="container-clima" style="opacity: 0.7;">
+                <p>Carregando previsão do tempo...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p>NewsToday &copy; 2026</p>
+    </footer>
+
+    <script>
+        function carregarClima() {
+            fetch("https://api.open-meteo.com/v1/forecast?latitude=-21.467&longitude=-47.005&current=temperature_2m,relative_humidity_2m,wind_speed_10m")
+            .then(resposta => resposta.json())
+            .then(dados => {
+                let agora = new Date();
+                let hora = agora.toLocaleTimeString('pt-BR');
+                let data = agora.toLocaleDateString('pt-BR');
+
+                document.getElementById("clima").innerHTML = `
+                <div class="container-clima">
+                    <p> Data: ${data}</p>
+                    <p> Hora: ${hora}</p>
+                    <p> Temperatura: ${dados.current.temperature_2m}°C</p>
+                    <p> Umidade: ${dados.current.relative_humidity_2m}%</p>
+                    <p> Vento: ${dados.current.wind_speed_10m} km/h</p>
+                </div>
+                `;
+            })
+            .catch(() => {
+                document.getElementById("clima").innerHTML = `
+                <div class="container-clima">
+                    <p>Erro ao carregar o clima. Tente novamente mais tarde.</p>
+                </div>
+                `;
+            });
+        }
+
+        // Carrega ao abrir a página
+        carregarClima();
+        // Atualiza a cada hora
+        setInterval(carregarClima, 3600000);
+    </script>
+</body>
+</html>
