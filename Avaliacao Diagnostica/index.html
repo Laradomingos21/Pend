@@ -8,23 +8,84 @@
 </head>
 <body>            
         <header class="topo">
-            <div class="barra">
                 <nav class="menu">
-                    <a href="sobre_mim">Home</a>
-                    <a href="meus_interesses">Meus interesses</a>
-                    <a href="projetos">Projetos</a>
+                    <a href="#inicio">Início</a>
+                    <a href="#meus-interesses">Meus interesses</a>
+                    <a href="#projetos">Projetos</a>                
+                    <button class="botao">
+                        <a href="https://wa.me/5519991669933" target="_blank" rel="noopener noreferrer">Fale comigo</a>
+                    </button>
                 </nav>
-                <div class="hamburger" onclick="toggleMenu()">☰</div>
-            </header>
-            </div>
-        <main>
+
+                <div class="hamburger">☰</div>   
+        </header>
+         
+        <main id="inicio">
             <section class="conteudo-principal">
+                <img src="/Avaliacao Diagnostica/Imagens/eu.jpeg" alt="Foto de perfil" class="eu">
                 <article class="conteudo">
-                    <p>Me chamo Lara, sou estudante do terceiro ano do ensino médio e do curso técnico em Desenvolvimento de Sistemas. Gosto muito de tecnologia e busco constantemente aprimorar meus conhecimentos por meio de projetos e estudos. Tenho conhecimentos em HTML, CSS, JavaScript, PHP, MySQL, Git e GitHub, além de estar aprendendo Flutter. Desenvolvi projetos como um sistema de rastreamento de ferramentas com RFID e sites responsivos. Meu objetivo é crescer profissionalmente na área de desenvolvimento de software, criando soluções eficientes e inovadoras.
-                    </p>
+                    <h1>Meu nome é <span>Lara Domingos</span></h1>
+                    <p>Sou estudante do terceiro ano do ensino médio e do curso técnico em Desenvolvimento de Sistemas. Gosto muito de tecnologia e busco constantemente aprimorar meus conhecimentos por meio de projetos e estudos.</p>
+
+                    <button class="botao-projeto">Ver Projetos</button>
+                   <!--<p>Me chamo Lara, sou estudante do terceiro ano do ensino médio e do curso técnico em Desenvolvimento de Sistemas. Gosto muito de tecnologia e busco constantemente aprimorar meus conhecimentos por meio de projetos e estudos. Tenho conhecimentos em HTML, CSS, JavaScript, PHP, MySQL, Git e GitHub, além de estar aprendendo Flutter. Desenvolvi projetos como um sistema de rastreamento de ferramentas com RFID e sites responsivos. Meu objetivo é crescer profissionalmente na área de desenvolvimento de software, criando soluções eficientes e inovadoras.
+                    </p>-->
                 </article>
             </section>
         </main>
 
+            <h2 id="meus-interesses">Meus Interesses</h2>          
+            <div class="cards-container">
+            <article class="cozinhar">
+                <div class="icone">
+                    <img src="/Avaliacao Diagnostica/Imagens/cozinhando.png">
+                </div>
+
+                <div class="texto">
+                    <h3>Cozinhar</h3>
+                </div>
+            </article>
+
+            <article class="cozinhar">
+                <div class="icone">
+                    <img src="/Avaliacao Diagnostica/Imagens/programa.png">
+                </div>
+                <div class="texto">
+                    <h3>Programação</h3>
+                </div>
+            </article>
+
+            <article class="cozinhar">
+                <div class="icone">
+                    <img src="/Avaliacao Diagnostica/Imagens/passaro.png">
+                </div>
+                <div class="texto">
+                    <h3>Pássaros</h3>
+                </div>
+            </article>
+
+            <article class="cozinhar">
+                <div class="icone">
+                    <img src="/Avaliacao Diagnostica/Imagens/musica.png">
+                </div>
+                <div class="texto">
+                    <h3>Músicas</h3>
+                </div>
+            </article>
+
+        <div id="projetos">                
+            <h2>Projetos</h2>
+            <section class="projeto-container">
+                <a href="https://link-do-projeto-atlas.com" target="_blank" rel="noopener noreferrer" class="projeto-container">
+    <img src="/Avaliacao Diagnostica/Imagens/atlas.png" alt="Projeto 1" class="atlas"><br></a>
+                <p><b>Sistema de rastreamento de ferramentas com RFID.</b></p>
+            </section>
+
+            <section class="projeto-container">
+                <a href="https://github.com/lara-domingos/Gabi-Bolos" target="_blank" rel="noopener noreferrer" class="projeto-container">
+    <img src="/Avaliacao Diagnostica/Imagens/Gabi-Bolos.png" alt="Projeto 1" class="atlas"><br></a>
+                <p><b>Site responsivo para uma confeiteira</b></p>
+            </section>
 </body>
+<script src="script.js"></script>
 </html>
