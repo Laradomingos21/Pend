@@ -11,15 +11,15 @@ class Aluno {
     }
 
     aprender() {
-        console.log(`O aluno ${this.nome} está aprendendo sobre o curso ${this.curso}`);
+        console.log(`A aluna ${this.nome} está aprendendo sobre o curso ${this.curso}`);
     }
 
     estudar() {
-        console.log(`o aluno ${this.nome} está estudando sobre o ${this.curso}`);
+        console.log(`A aluna ${this.nome} está estudando sobre o ${this.curso}`);
     }
 
     apresentar() {
-        console.log(`O aluno ${this.nome} está apresentando o trabalho do ${this.curso}`);
+        console.log(`A aluna ${this.nome} está apresentando o trabalho do ${this.curso}`);
     }
 }
 
