@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f4ecef 0%, #e0d8dc 100%); /* Creme bem suave com fundo rosado */
+    color: #070707;
+    flex-direction: column;
+    display: flex;
+}
+
+.titulo {
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fila-1 {
+    background-color:#f7e9ee;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: left;
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+    border: none;
+    display: flex;
+    flex-direction: row;  /* Alterado de column para row */
+    align-items: center; /* Mantém o ícone alinhado ao topo. Se quiser centralizado, use 'center' */
+    gap: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Adicione esta linha! Coloquei 0.08 para garantir que ela apareça bem no fundo creme */
+    font-size: 50px;
+}
+
+.carta {
+    justify-content: center;
+    padding: 30px;
+}
+
+#container-2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fila-2 {
+    background-color:#f7e9ee;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: left;
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+    border: none;
+    display: flex;
+    flex-direction: row;  /* Alterado de column para row */
+    align-items: center; /* Mantém o ícone alinhado ao topo. Se quiser centralizado, use 'center' */
+    gap: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Adicione esta linha! Coloquei 0.08 para garantir que ela apareça bem no fundo creme */
+    font-size: 50px;
+}
+
+
+#container-3 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fila-3 {
+    background-color:#f7e9ee;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: left;
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+    border: none;
+    display: flex;
+    flex-direction: row;  /* Alterado de column para row */
+    align-items: center; /* Mantém o ícone alinhado ao topo. Se quiser centralizado, use 'center' */
+    gap: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Adicione esta linha! Coloquei 0.08 para garantir que ela apareça bem no fundo creme */
+    font-size: 50px;
+}
+
+#container-4 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fila-4 {
+    background-color:#f7e9ee;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: left;
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+    border: none;
+    display: flex;
+    flex-direction: row;  /* Alterado de column para row */
+    align-items: center; /* Mantém o ícone alinhado ao topo. Se quiser centralizado, use 'center' */
+    gap: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Adicione esta linha! Coloquei 0.08 para garantir que ela apareça bem no fundo creme */
+    font-size: 50px;
+}
