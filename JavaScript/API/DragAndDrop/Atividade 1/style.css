@@ -6,104 +6,22 @@
 }
 
 body {
-    background: linear-gradient(135deg, #f4ecef 0%, #e0d8dc 100%); /* Creme bem suave com fundo rosado */
     color: #070707;
     flex-direction: column;
     display: flex;
+    background: linear-gradient(135deg, #d2f4fb, #26515a);
 }
 
 .titulo {
     text-align: center;
-}
-
-#container{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.fila-1 {
-    background-color:#f7e9ee;
-    border-radius: 15px;
-    padding: 30px;
-    text-align: left;
-    flex: 1;
-    min-width: 150px;
-    max-width: 200px;
-    border: none;
-    display: flex;
-    flex-direction: row;  /* Alterado de column para row */
-    align-items: center; /* Mantém o ícone alinhado ao topo. Se quiser centralizado, use 'center' */
-    gap: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Adicione esta linha! Coloquei 0.08 para garantir que ela apareça bem no fundo creme */
     font-size: 50px;
 }
 
-.carta {
-    justify-content: center;
-    padding: 30px;
-}
-
-#container-2 {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.fila-2 {
-    background-color:#f7e9ee;
-    border-radius: 15px;
-    padding: 30px;
-    text-align: left;
-    flex: 1;
-    min-width: 150px;
-    max-width: 200px;
-    border: none;
-    display: flex;
-    flex-direction: row;  /* Alterado de column para row */
-    align-items: center; /* Mantém o ícone alinhado ao topo. Se quiser centralizado, use 'center' */
-    gap: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Adicione esta linha! Coloquei 0.08 para garantir que ela apareça bem no fundo creme */
-    font-size: 50px;
-}
-
-
-#container-3 {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.fila-3 {
-    background-color:#f7e9ee;
-    border-radius: 15px;
-    padding: 30px;
-    text-align: left;
-    flex: 1;
-    min-width: 150px;
-    max-width: 200px;
-    border: none;
-    display: flex;
-    flex-direction: row;  /* Alterado de column para row */
-    align-items: center; /* Mantém o ícone alinhado ao topo. Se quiser centralizado, use 'center' */
-    gap: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Adicione esta linha! Coloquei 0.08 para garantir que ela apareça bem no fundo creme */
-    font-size: 50px;
-}
-
+.container,
+#container-2,
+#container-3,
 #container-4 {
+    perspective: 1000px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -113,19 +31,77 @@ body {
     padding: 0 20px;
 }
 
+.fila-1,
+.fila-2,
+.fila-3,
 .fila-4 {
-    background-color:#f7e9ee;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    background-color: #f7e9ee;
     border-radius: 15px;
     padding: 30px;
     text-align: left;
     flex: 1;
     min-width: 150px;
     max-width: 200px;
+    height: 180px;
     border: none;
-    display: flex;
-    flex-direction: row;  /* Alterado de column para row */
-    align-items: center; /* Mantém o ícone alinhado ao topo. Se quiser centralizado, use 'center' */
-    gap: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Adicione esta linha! Coloquei 0.08 para garantir que ela apareça bem no fundo creme */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     font-size: 50px;
+    cursor: pointer;
+}
+
+.carta-frente,
+.carta-verso {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    backface-visibility: hidden;
+}
+
+.carta-frente {
+    background: #d2f4fb;
+}
+
+.carta-verso {
+    background-color: #d2f4fb;
+    transform: rotateY(180deg); /* já nasce de costas, some até virar */
+}
+
+/*ela é quem gira, não existe carta-inner */
+.fila-1.virada,
+.fila-2.virada,
+.fila-3.virada,
+.fila-4.virada {
+    transform: rotateY(180deg);
+}
+
+.arrastando {
+    opacity: 0.4;
+}
+
+#carrinho {
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+
+#carrinho h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
 }
