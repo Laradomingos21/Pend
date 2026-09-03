@@ -1,24 +1,23 @@
 //objeto . api. método
 navigator.geolocation.getCurrentPosition(
     function (posicao) {
-        console.log('Latitude: ', posicao.coords.latitude);
-        console.log("Longitude: ", posicao.coords.longitude);
-        console.log("Precisão: ", posicao.coords.accuracy);
+        const latitude = document.querySelector("#latitude");
+        latitude.innerHTML = 'Latitude: ' + posicao.coords.latitude;
 
-        const location = document.querySelector("#localizacao");
-        location.src = "https://cdn-icons-png.flaticon.com/512/6068/6068781.png";
+        const longitude = document.querySelector("#longitude");
+        longitude.innerHTML = "Longitude: " + posicao.coords.longitude;
+
+        const precisao = document.querySelector("#precisao");
+        precisao.innerHTML = "Precisão: " + posicao.coords.accuracy;
     },
     function (erro) {
         console.log("Não foi possível obter a localização. ", erro);
-
-        const location = document.querySelector("#localizacao");
-        location.src = "https://cdn-icons-png.flaticon.com/512/2951/2951999.png";
+        document.querySelector("#latitude").innerHTML = "Erro ao obter localização.";
     }
-)
+);
 
 navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: true
+    video: true
 })
 .then(function(stream) {
     const video = document.querySelector("#camera");
