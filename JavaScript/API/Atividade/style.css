@@ -46,13 +46,28 @@ body {
     border: 1px solid #ccc;
 }
 
-#camera {
+.midia {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;               
+    margin-bottom: 20px;
+}
+
+#camera, #foto {
     align-items: center;
-    width: 600px;
-    max-width: 550px;
-    border-radius: 70px;
+    width: 400px;             
+    max-width: 450px;        
+    border-radius: 20px;     
     display: block;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    height: auto;    
+}
+
+#botao {
+    display: block;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 10px auto; 
 }
 
 p {
