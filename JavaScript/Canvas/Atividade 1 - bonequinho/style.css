@@ -1,0 +1,13 @@
+
+canvas {
+    border-style: dashed;
+    background: linear-gradient(135deg, #fabcd4 0%, #fff8fb 100%); 
+    border-radius: 10px;
+    display: block;        /* Transforma o canvas em bloco para aceitar margens laterais */
+    margin: 0 auto;        /* Define margem zero em cima/baixo e automática nas laterais (centraliza) */
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
